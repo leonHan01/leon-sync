@@ -3,6 +3,7 @@ package com.hanqi.leonsync.controller;
 import com.hanqi.leonsync.util.FileUploadUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -18,6 +19,11 @@ public class FileController {
         FileUploadUtil.doFileUploadToServer("/data/data/com.termux/files/home/storage/dcim");
 
         return "ok";
+    }
+
+    @PostMapping
+    public void initUploadFile() {
+        FileUploadUtil.doFileUploadToServer("/data/data/com.termux/files/home/storage/dcim");
     }
 
 }
