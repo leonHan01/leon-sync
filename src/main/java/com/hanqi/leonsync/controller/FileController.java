@@ -13,7 +13,10 @@ public class FileController {
 
     @GetMapping(value = "startUpload")
     public String startFileUpload() {
-        FileUploadUtil.doFileUploadToServer(FILE_UPLOAD_SOURCE_PATH2);
+        // FileUploadUtil.doFileUploadToServer(FILE_UPLOAD_SOURCE_PATH2);
+        // XHS
+        FileUploadUtil.doFileUploadToServer("/data/data/com.termux/files/home/storage/dcim");
+
         return "ok";
     }
 

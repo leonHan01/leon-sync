@@ -34,7 +34,7 @@ public class FileUploadUtil {
                 totalCnt++;
             }
         }
-        int successCnt = 0;
+
         for (File file : inputFiles) {
             if (!file.isDirectory()) {
                 if (file.getName().endsWith("jpg") || file.getName().endsWith("webp") || file.getName().endsWith("jpeg")) {
